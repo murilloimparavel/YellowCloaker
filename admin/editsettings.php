@@ -19,12 +19,12 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 }
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="PT-br">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Binomo Cloaker by Yellow Web</title>
+    <title>blog</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 
     <meta name="description" content="">
@@ -79,7 +79,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                             </ul>
                         </li>
                         <li>
-                            <a href="editsettings.php?password=<?=$_GET['password']?><?=$date_str!==''?$date_str:''?>" aria-expanded="false"><i class="icon nalika-table icon-wrap"></i> <span class="mini-click-non">Settings</span></a>
+                            <a href="modifysettings.php?password=<?=$_GET['password']?><?=$date_str!==''?$date_str:''?>" aria-expanded="false"><i class="icon nalika-table icon-wrap"></i> <span class="mini-click-non">Settings</span></a>
                         </li>
                   </ul>
                 </nav>
@@ -147,11 +147,11 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <div class="all-form-element-inner">
                                                 <hr>
-<h4>#1 Настройка вайта</h4>
+<h4>#1 Configuração do white</h4>
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Выберите метод: </label>
+            <label class="login2 pull-left pull-left-pro">Selecione o método: </label>
         </div>
         <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
             <div class="bt-df-checkbox pull-left">
@@ -159,7 +159,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$white_action==='folder'?'checked':''?> value="folder" name="white.action" onclick="(document.getElementById('b_2').style.display='block'); (document.getElementById('b_3').style.display='none'); (document.getElementById('b_4').style.display='none'); (document.getElementById('b_5').style.display='none')"> Локальный вайт-пейдж из папки </label>
+                                    <input type="radio" <?=$white_action==='folder'?'checked':''?> value="folder" name="white.action" onclick="(document.getElementById('b_2').style.display='block'); (document.getElementById('b_3').style.display='none'); (document.getElementById('b_4').style.display='none'); (document.getElementById('b_5').style.display='none')"> White-page local da pasta </label>
                         </div>
                     </div>
                 </div>
@@ -167,7 +167,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$white_action==='redirect'?'checked':''?> value="redirect" name="white.action" onclick="(document.getElementById('b_2').style.display='none'); (document.getElementById('b_3').style.display='block'); (document.getElementById('b_4').style.display='none'); (document.getElementById('b_5').style.display='none')"> Редирект </label>
+                                    <input type="radio" <?=$white_action==='redirect'?'checked':''?> value="redirect" name="white.action" onclick="(document.getElementById('b_2').style.display='none'); (document.getElementById('b_3').style.display='block'); (document.getElementById('b_4').style.display='none'); (document.getElementById('b_5').style.display='none')"> Redirecionamento (Não recomendado) </label>
                         </div>
                     </div>
                 </div>
@@ -175,7 +175,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$white_action==='curl'?'checked':''?> value="curl" name="white.action" onclick="(document.getElementById('b_2').style.display='none'); (document.getElementById('b_3').style.display='none'); (document.getElementById('b_4').style.display='block'); (document.getElementById('b_5').style.display='none')">  Подгрузка внешнего сайта через curl </label>
+                                    <input type="radio" <?=$white_action==='curl'?'checked':''?> value="curl" name="white.action" onclick="(document.getElementById('b_2').style.display='none'); (document.getElementById('b_3').style.display='none'); (document.getElementById('b_4').style.display='block'); (document.getElementById('b_5').style.display='none')">  Carregamento de site externo via curl </label>
                         </div>
                     </div>
                 </div>
@@ -183,7 +183,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$white_action==='error'?'checked':''?> value="error" name="white.action" onclick="(document.getElementById('b_2').style.display='none'); (document.getElementById('b_3').style.display='none'); (document.getElementById('b_4').style.display='none'); (document.getElementById('b_5').style.display='block')">  Возврат HTTP-кода <small>(например, ошибки 404 или просто 200)</small> </label>
+                                    <input type="radio" <?=$white_action==='error'?'checked':''?> value="error" name="white.action" onclick="(document.getElementById('b_2').style.display='none'); (document.getElementById('b_3').style.display='none'); (document.getElementById('b_4').style.display='none'); (document.getElementById('b_5').style.display='block')">  Retorno do código HTTP <small>(por exemplo, erro 404 ou apenas 200)</small> </label>
                         </div>
                     </div>
                 </div>
@@ -195,7 +195,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
     <div class="form-group-inner">
         <div class="row">
             <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                <label class="login2 pull-left pull-left-pro">Папка, где лежит вайт: </label>
+                <label class="login2 pull-left pull-left-pro">Pasta onde o arquivo está: </label>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                 <div class="input-group custom-go-button">
@@ -209,7 +209,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Адрес для редиректа: </label>
+            <label class="login2 pull-left pull-left-pro">Endereço para redirecionamento: </label>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
             <div class="input-group custom-go-button">
@@ -222,7 +222,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Выберите код редиректа: </label>
+            <label class="login2 pull-left pull-left-pro">Selecione o código de redirecionamento: </label>
         </div>
         <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
             <div class="bt-df-checkbox pull-left">
@@ -269,7 +269,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Адрес для подгрузки через curl: </label>
+            <label class="login2 pull-left pull-left-pro">Endereço para carregamento via curl:</label>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
             <div class="input-group custom-go-button">
@@ -284,7 +284,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">HTTP-код для возврата вместо вайта: </label>
+            <label class="login2 pull-left pull-left-pro">Código HTTP para retorno em vez do arquivo:</label>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
             <div class="input-group custom-go-button">
@@ -298,7 +298,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Показывать индивидуальный вайт под каждый домен? </label>
+            <label class="login2 pull-left pull-left-pro">Exibir arquivo individual para cada domínio?</label>
         </div>
         <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
             <div class="bt-df-checkbox pull-left">
@@ -307,7 +307,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$white_use_domain_specific===false?'checked':''?> value="false" name="white.domainfilter.use" onclick="(document.getElementById('b_6').style.display='none')"> Нет </label>
+                                    <input type="radio" <?=$white_use_domain_specific===false?'checked':''?> value="false" name="white.domainfilter.use" onclick="(document.getElementById('b_6').style.display='none')"> Não </label>
                         </div>
                     </div>
                 </div>
@@ -315,7 +315,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$white_use_domain_specific===true?'checked':''?> value="true" name="white.domainfilter.use" onclick="(document.getElementById('b_6').style.display='block')"> Да, показывать </label>
+                                    <input type="radio" <?=$white_use_domain_specific===true?'checked':''?> value="true" name="white.domainfilter.use" onclick="(document.getElementById('b_6').style.display='block')"> Sim, mostrar. </label>
                         </div>
                     </div>
                 </div>
@@ -330,7 +330,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner white">
     <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-            <label class="login2 pull-left pull-left-pro">Домен => Метод:Направление</label>
+            <label class="login2 pull-left pull-left-pro">Domínio => Método: Redirecionamento</label>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
              <div class="input-group">
@@ -346,21 +346,21 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
             </div>
         </div>
         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-            <a href="javascript:void(0)" class="remove-domain-item btn btn-sm btn-primary">Удалить</a>
+            <a href="javascript:void(0)" class="remove-domain-item btn btn-sm btn-primary">Remover</a>
         </div>
     </div>
 </div>
 <?php } ?>
 </div>
-<a id="add-domain-item" class="btn btn-sm btn-primary" href="javascript:;">Добавить</a>
+<a id="add-domain-item" class="btn btn-sm btn-primary" href="javascript:;">Adicionar</a>
 </div>
 
 <div class="form-group-inner">
 <div class="row">
     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-        <label class="login2 pull-left pull-left-pro">Использовать JS проверку? 
+        <label class="login2 pull-left pull-left-pro">Utilizar verificação em JS? 
             <small>
-Если проверка по JS включена, то пользователь всегда попадает вначале на вайт, и только если проверки пройдены, тогда ему показывается блэк.
+            Se a verificação em JS estiver ativada, o usuário sempre é direcionado primeiro para o white, e somente se a verificação for aprovada, ele verá o black.
             </small> 
         </label>
     </div>
@@ -370,7 +370,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="i-checks pull-left">
                         <label>
-                                <input type="radio" <?=$use_js_checks===false?'checked="checked"':''?> value="false" name="white.jschecks.enabled" onclick="(document.getElementById('jscheckssettings').style.display = 'none')"> Нет, не использовать </label>
+                                <input type="radio" <?=$use_js_checks===false?'checked="checked"':''?> value="false" name="white.jschecks.enabled" onclick="(document.getElementById('jscheckssettings').style.display = 'none')"> Não, nunca usar. </label>
                     </div>
                 </div>
             </div>
@@ -378,7 +378,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="i-checks pull-left">
                         <label>
-                                <input type="radio" value="true" <?=$use_js_checks===true?'checked="checked"':''?> name="white.jschecks.enabled" onclick="(document.getElementById('jscheckssettings').style.display = 'block')">  Использовать </label>
+                                <input type="radio" value="true" <?=$use_js_checks===true?'checked="checked"':''?> name="white.jschecks.enabled" onclick="(document.getElementById('jscheckssettings').style.display = 'block')">  Sim, Usar. </label>
                     </div>
                 </div>
             </div>
@@ -391,7 +391,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Время теста в миллисекундах: </label>
+            <label class="login2 pull-left pull-left-pro">Tempo de teste em milissegundos: </label>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
             <div class="input-group custom-go-button">
@@ -403,7 +403,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Что проверять? </label>
+            <label class="login2 pull-left pull-left-pro">O que verificar?</label>
         </div>
         <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
             <div class="bt-df-checkbox pull-left">
@@ -412,7 +412,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="checkbox" name="white.jschecks.events[]" value="mousemove" <?=in_array('mousemove',$js_checks)?'checked':''?>> Движения мыши </label>
+                                    <input type="checkbox" name="white.jschecks.events[]" value="mousemove" <?=in_array('mousemove',$js_checks)?'checked':''?>> Movimentos do mouse </label>
                         </div>
                     </div>
                 </div>
@@ -420,7 +420,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="checkbox" name="white.jschecks.events[]" value="keydown" <?=in_array('keydown',$js_checks)?'checked':''?>> Нажатия клавиш </label>
+                                    <input type="checkbox" name="white.jschecks.events[]" value="keydown" <?=in_array('keydown',$js_checks)?'checked':''?>>Pressionamentos de teclas</label>
                         </div>
                     </div>
                 </div>
@@ -428,7 +428,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="checkbox" name="white.jschecks.events[]" value="scroll" <?=in_array('scroll',$js_checks)?'checked':''?>> Скроллинг </label>
+                                    <input type="checkbox" name="white.jschecks.events[]" value="scroll" <?=in_array('scroll',$js_checks)?'checked':''?>> Rolagem </label>
                         </div>
                     </div>
                 </div>
@@ -436,7 +436,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="checkbox" name="white.jschecks.events[]" value="devicemotion" <?=in_array('devicemotion',$js_checks)?'checked':''?>> Датчик движения (только для Android)</label>
+                                    <input type="checkbox" name="white.jschecks.events[]" value="devicemotion" <?=in_array('devicemotion',$js_checks)?'checked':''?>> Sensor de movimento (apenas para Android)</label>
                         </div>
                     </div>
                 </div>
@@ -444,16 +444,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="checkbox" name="white.jschecks.events[]" value="deviceorientation" <?=in_array('deviceorientation',$js_checks)?'checked':''?>> Датчик ориентации в пространстве (только для Android)</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="i-checks pull-left">
-                            <label>
-                                    <input type="checkbox" name="white.jschecks.events[]" value="audiocontext" <?=in_array('audiocontext',$js_checks)?'checked':''?>> Наличие аудиодвижка в браузере</label>
+                                    <input type="checkbox" name="white.jschecks.events[]" value="deviceorientation" <?=in_array('deviceorientation',$js_checks)?'checked':''?>> Sensor de orientação espacial (apenas para Android)</label>
                         </div>
                     </div>
                 </div>
@@ -462,7 +453,16 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input id="tzcheck" type="checkbox" name="white.jschecks.events[]" value="timezone" <?=in_array('timezone',$js_checks)?'checked':''?> onchange="(document.getElementById('jscheckstz').style.display = this.checked?'block':'none')"> Часовой пояс </label>
+                                    <input type="checkbox" name="white.jschecks.events[]" value="audiocontext" <?=in_array('audiocontext',$js_checks)?'checked':''?>> Presença de mecanismo de áudio no navegador</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="i-checks pull-left">
+                            <label>
+                                    <input id="tzcheck" type="checkbox" name="white.jschecks.events[]" value="timezone" <?=in_array('timezone',$js_checks)?'checked':''?> onchange="(document.getElementById('jscheckstz').style.display = this.checked?'block':'none')"> Fuso horário</label>
                         </div>
                     </div>
                 </div>
@@ -473,7 +473,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div id="jscheckstz" class="form-group-inner" style="display:<?=in_array('timezone',$js_checks)?'block':'none'?>;">
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Минимально допустимый часовой пояс</label>
+            <label class="login2 pull-left pull-left-pro">Fuso horário mínimo permitido</label>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
             <div class="input-group custom-go-button">
@@ -483,7 +483,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
     </div>
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Максимально допустимый часовой пояс</label>
+            <label class="login2 pull-left pull-left-pro">Fuso horário mínimo permitido</label>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
             <div class="input-group custom-go-button">
@@ -495,7 +495,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Маскировать код JS-проверки? </label>
+            <label class="login2 pull-left pull-left-pro">Mascarar o código da verificação em JS? </label>
         </div>
         <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
             <div class="bt-df-checkbox pull-left">
@@ -504,7 +504,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" value="true" <?=$js_obfuscate===true?'checked="checked"':''?> name="white.jschecks.obfuscate">  Маскировать </label>
+                                    <input type="radio" value="true" <?=$js_obfuscate===true?'checked="checked"':''?> name="white.jschecks.obfuscate"> Mascarar </label>
                         </div>
                     </div>
                 </div>
@@ -512,7 +512,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" value="false" <?=$js_obfuscate===false?'checked="checked"':''?> name="white.jschecks.obfuscate"> Нет, не маскировать </label>
+                                    <input type="radio" value="false" <?=$js_obfuscate===false?'checked="checked"':''?> name="white.jschecks.obfuscate"> Não, não mascarar </label>
                         </div>
                     </div>
                 </div>
@@ -524,11 +524,11 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 </div>
 <br>
 <hr>
-<h4>#2 Настройка блэка</h4>
+<h4>#2 Configuração do black (bloco de conteúdo oculto)</h4>
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Выберите метод загрузки прокладок: </label>
+            <label class="login2 pull-left pull-left-pro">Escolha o método de carregamento das páginas intermediárias: </label>
         </div>
         <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
             <div class="bt-df-checkbox pull-left">
@@ -536,7 +536,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$black_preland_action==='none'?'checked':''?> value="none" name="black.prelanding.action" onclick="(document.getElementById('b_8').style.display='none')"> Не использовать прелендинг </label>
+                                    <input type="radio" <?=$black_preland_action==='none'?'checked':''?> value="none" name="black.prelanding.action" onclick="(document.getElementById('b_8').style.display='none')"> Não utilizar pre-landing </label>
                         </div>
                     </div>
                 </div>
@@ -544,7 +544,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$black_preland_action==='folder'?'checked':''?> value="folder" name="black.prelanding.action" onclick="(document.getElementById('b_8').style.display='block')"> Локальный прелендинг из папки </label>
+                                    <input type="radio" <?=$black_preland_action==='folder'?'checked':''?> value="folder" name="black.prelanding.action" onclick="(document.getElementById('b_8').style.display='block')"> Pre-landing local da pasta </label>
                         </div>
                     </div>
                 </div>
@@ -558,7 +558,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
     <div class="form-group-inner">
         <div class="row">
             <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                <label class="login2 pull-left pull-left-pro">Папки, где лежат прелендинги </label>
+                <label class="login2 pull-left pull-left-pro">Pastas onde os pre-landings estão armazenados</label>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                 <div class="input-group custom-go-button">
@@ -573,7 +573,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Выберите метод загрузки лендингов: </label>
+            <label class="login2 pull-left pull-left-pro">Selecione o método de carregamento dos landings: </label>
         </div>
         <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
             <div class="bt-df-checkbox pull-left">
@@ -582,7 +582,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$black_land_action==='folder'?'checked':''?> value="folder" name="black.landing.action" onclick="(document.getElementById('b_landings_redirect').style.display='none'); (document.getElementById('b_landings_folder').style.display='block')"> Локальный лендинг из папки </label>
+                                    <input type="radio" <?=$black_land_action==='folder'?'checked':''?> value="folder" name="black.landing.action" onclick="(document.getElementById('b_landings_redirect').style.display='none'); (document.getElementById('b_landings_folder').style.display='block')"> Landing local da pasta</label>
                         </div>
                     </div>
                 </div>
@@ -590,7 +590,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$black_land_action==='redirect'?'checked':''?> value="redirect" name="black.landing.action" onclick="(document.getElementById('b_landings_redirect').style.display='block'); (document.getElementById('b_landings_folder').style.display='none')"> Редирект </label>
+                                    <input type="radio" <?=$black_land_action==='redirect'?'checked':''?> value="redirect" name="black.landing.action" onclick="(document.getElementById('b_landings_redirect').style.display='block'); (document.getElementById('b_landings_folder').style.display='none')"> Redirecionamento </label>
                         </div>
                     </div>
                 </div>
@@ -602,7 +602,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Папки, где лежат лендинги </label>
+            <label class="login2 pull-left pull-left-pro">Pastas onde os landings estão armazenados</label>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
             <div class="input-group custom-go-button">
@@ -615,7 +615,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Использовать страницу Спасибо: </label>
+            <label class="login2 pull-left pull-left-pro">Usar página de agradecimento:</label>
         </div>
         <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
             <div class="bt-df-checkbox pull-left">
@@ -624,7 +624,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$black_land_use_custom_thankyou_page===true?'checked':''?> value="true" name="black.landing.folder.customthankyoupage.use" onclick="(document.getElementById('ctpage').style.display = 'block'); (document.getElementById('pppage').style.display = 'none')"> Кастомную, на стороне кло </label>
+                                    <input type="radio" <?=$black_land_use_custom_thankyou_page===true?'checked':''?> value="true" name="black.landing.folder.customthankyoupage.use" onclick="(document.getElementById('ctpage').style.display = 'block'); (document.getElementById('pppage').style.display = 'none')"> Customizada, do lado do c-l-o-a-k-e-r</label>
                         </div>
                     </div>
                 </div>
@@ -644,7 +644,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div id="ctpage" class="form-group-inner" style="display:<?=$black_land_use_custom_thankyou_page===true?'block':'none'?>">
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Язык, на котором показывать страницу Спасибо Кло: </label>
+            <label class="login2 pull-left pull-left-pro">O idioma em que mostrar a página de agradecimento Cloaker: </label>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
             <div class="input-group custom-go-button">
@@ -654,7 +654,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
     </div>
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <label class="login2 pull-left pull-left-pro"> Путь от корня лендинга до скрипта отправки данных с формы:</label>
+            <label class="login2 pull-left pull-left-pro"> O caminho da raiz do landing page até o script de envio de dados do formulário:</label>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
             <div class="input-group custom-go-button">
@@ -664,7 +664,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
     </div>
     <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Использовать допродажи на странице Спасибо: </label>
+            <label class="login2 pull-left pull-left-pro">Usar scripts adicionais na página de agradecimento: </label>
         </div>
         <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
             <div class="bt-df-checkbox pull-left">
@@ -673,7 +673,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$thankyou_upsell===true?'checked':''?> value="true" name="black.landing.folder.customthankyoupage.upsell.use" onclick="document.getElementById('thankupsell').style.display = 'block'"> Да</label>
+                                    <input type="radio" <?=$thankyou_upsell===true?'checked':''?> value="true" name="black.landing.folder.customthankyoupage.upsell.use" onclick="document.getElementById('thankupsell').style.display = 'block'"> Sim</label>
                         </div>
                     </div>
                 </div>
@@ -681,7 +681,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$thankyou_upsell===false?'checked':''?> value="false" name="black.landing.folder.customthankyoupage.upsell.use" onclick="document.getElementById('thankupsell').style.display = 'none'">Нет</label>
+                                    <input type="radio" <?=$thankyou_upsell===false?'checked':''?> value="false" name="black.landing.folder.customthankyoupage.upsell.use" onclick="document.getElementById('thankupsell').style.display = 'none'">Não</label>
                         </div>
                     </div>
                 </div>
@@ -712,7 +712,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
     </div>
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Полный адрес ленда апсейла:</label>
+            <label class="login2 pull-left pull-left-pro">Полный адрес ленSim апсейла:</label>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
             <div class="input-group custom-go-button">
@@ -722,7 +722,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
     </div>
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Имя папки с картинками для витрины <small>папка должна быть создана в thankyou/upsell</small></label>
+            <label class="login2 pull-left pull-left-pro">Имя папки с картинками для витрины <small>папка должна быть созSimна в thankyou/upsell</small></label>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
             <div class="input-group custom-go-button">
@@ -743,7 +743,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$black_land_log_conversions_on_button_click===false?'checked':''?> value="false" name="black.landing.folder.conversions.logonbuttonclick"> Нет <small>(конверсия будет считаться на КАСТОМНОЙ стр.Спасибо)</small> </label>
+                                    <input type="radio" <?=$black_land_log_conversions_on_button_click===false?'checked':''?> value="false" name="black.landing.folder.conversions.logonbuttonclick"> Não <small>(конверсия будет считаться на КАСТОМНОЙ стр.Спасибо)</small> </label>
                         </div>
                     </div>
                 </div>
@@ -751,7 +751,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$black_land_log_conversions_on_button_click===true?'checked':''?> value="true" name="black.landing.folder.conversions.logonbuttonclick"> Да </label>
+                                    <input type="radio" <?=$black_land_log_conversions_on_button_click===true?'checked':''?> value="true" name="black.landing.folder.conversions.logonbuttonclick"> Sim </label>
                         </div>
                     </div>
                 </div>
@@ -760,7 +760,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
     </div>
     <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Откуда отстукивать в Facebook конверсию? </label>
+            <label class="login2 pull-left pull-left-pro">ОткуSim отстукивать в Facebook конверсию? </label>
         </div>
         <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
             <div class="bt-df-checkbox pull-left">
@@ -787,7 +787,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 
     <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Откуда отстукивать в TikTok конверсию? </label>
+            <label class="login2 pull-left pull-left-pro">ОткуSim отстукивать в TikTok конверсию? </label>
         </div>
         <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
             <div class="bt-df-checkbox pull-left">
@@ -817,7 +817,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Адреса для редиректа: <small>(Можно НЕСКОЛЬКО через запятую)</small> </label>
+            <label class="login2 pull-left pull-left-pro">Endereços para redirecionamento:<small>(Pode ser VÁRIOS separados por vírgula)</small> </label>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
             <div class="input-group custom-go-button">
@@ -830,7 +830,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Выберите код редиректа: </label>
+            <label class="login2 pull-left pull-left-pro">Selecione o código de redirecionamento: </label>
         </div>
         <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
             <div class="bt-df-checkbox pull-left">
@@ -876,7 +876,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Действие при подключении кло через Javascript (для конструкторов) <small>Если в качестве блэка выбран редирект, то и с конструктора ВСЕГДА будет редирект. Если же блэк локальный, то возможны только: подмена, iframe</small> </label>
+            <label class="login2 pull-left pull-left-pro">Ação ao conectar o cloaker via Javascript (para construtores). <small>Se um redirecionamento for escolhido como black, sempre haverá redirecionamento do construtor. Se o black for local, as únicas opções são: substituição ou iframe.</small> </label>
         </div>
         <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
             <div class="bt-df-checkbox pull-left">
@@ -885,7 +885,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$black_jsconnect_action==='redirect'?'checked':''?> value="redirect" name="black.jsconnect"> Редирект </label>
+                                    <input type="radio" <?=$black_jsconnect_action==='redirect'?'checked':''?> value="redirect" name="black.jsconnect"> Redirecionamento </label>
                         </div>
                     </div>
                 </div>
@@ -893,7 +893,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$black_jsconnect_action==='replace'?'checked':''?> value="replace" name="black.jsconnect"> Подмена </label>
+                                    <input type="radio" <?=$black_jsconnect_action==='replace'?'checked':''?> value="replace" name="black.jsconnect"> Substituição </label>
                         </div>
                     </div>
                 </div>
@@ -911,7 +911,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 </div>
 <br>
 <hr>
-<h4>#3 Настройка метрик и пикселей</h4>
+<h4>#3 Configuração de métricas e pixels</h4>
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
@@ -937,7 +937,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
     </div>
 </div>
 
-<h5>#3.1 Настройка пикселя Facebook</h5>
+<h5>#3.1 Configuração do pixel do Facebook</h5>
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
@@ -963,7 +963,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$fb_use_pageview===false?'checked':''?> value="false" name="pixels.fb.pageview"> Нет </label>
+                                    <input type="radio" <?=$fb_use_pageview===false?'checked':''?> value="false" name="pixels.fb.pageview"> Não </label>
                         </div>
                     </div>
                 </div>
@@ -971,7 +971,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$fb_use_pageview===true?'checked':''?> value="true" name="pixels.fb.pageview"> Да, добавлять </label>
+                                    <input type="radio" <?=$fb_use_pageview===true?'checked':''?> value="true" name="pixels.fb.pageview"> Sim, добавлять </label>
                         </div>
                     </div>
                 </div>
@@ -992,7 +992,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$fb_use_viewcontent===false?'checked':''?> value="false" name="pixels.fb.viewcontent.use" onclick="(document.getElementById('b_8-2').style.display='none')"> Нет </label>
+                                    <input type="radio" <?=$fb_use_viewcontent===false?'checked':''?> value="false" name="pixels.fb.viewcontent.use" onclick="(document.getElementById('b_8-2').style.display='none')"> Não </label>
                         </div>
                     </div>
                 </div>
@@ -1000,7 +1000,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$fb_use_viewcontent===true?'checked':''?> value="true" name="pixels.fb.viewcontent.use" onclick="(document.getElementById('b_8-2').style.display='block')"> Да, добавлять </label>
+                                    <input type="radio" <?=$fb_use_viewcontent===true?'checked':''?> value="true" name="pixels.fb.viewcontent.use" onclick="(document.getElementById('b_8-2').style.display='block')"> Sim, добавлять </label>
                         </div>
                     </div>
                 </div>
@@ -1048,7 +1048,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
         </div>
     </div>
 </div>
-<h5>#3.2 Настройка пикселя TikTok</h5>
+<h5>#3.2 Configuração do pixel do TikTok</h5>
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
@@ -1074,7 +1074,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$tt_use_pageview===false?'checked':''?> value="false" name="pixels.tt.pageview"> Нет </label>
+                                    <input type="radio" <?=$tt_use_pageview===false?'checked':''?> value="false" name="pixels.tt.pageview"> Não </label>
                         </div>
                     </div>
                 </div>
@@ -1082,7 +1082,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$tt_use_pageview===true?'checked':''?> value="true" name="pixels.tt.pageview"> Да, добавлять </label>
+                                    <input type="radio" <?=$tt_use_pageview===true?'checked':''?> value="true" name="pixels.tt.pageview"> Sim, добавлять </label>
                         </div>
                     </div>
                 </div>
@@ -1103,7 +1103,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$tt_use_viewcontent===false?'checked':''?> value="false" name="pixels.tt.viewcontent.use" onclick="(document.getElementById('tt_8-2').style.display='none')"> Нет </label>
+                                    <input type="radio" <?=$tt_use_viewcontent===false?'checked':''?> value="false" name="pixels.tt.viewcontent.use" onclick="(document.getElementById('tt_8-2').style.display='none')"> Não </label>
                         </div>
                     </div>
                 </div>
@@ -1111,7 +1111,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$tt_use_viewcontent===true?'checked':''?> value="true" name="pixels.tt.viewcontent.use" onclick="(document.getElementById('tt_8-2').style.display='block')"> Да, добавлять </label>
+                                    <input type="radio" <?=$tt_use_viewcontent===true?'checked':''?> value="true" name="pixels.tt.viewcontent.use" onclick="(document.getElementById('tt_8-2').style.display='block')"> Sim, добавлять </label>
                         </div>
                     </div>
                 </div>
@@ -1161,11 +1161,11 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 </div>
 <br>
 <hr>
-<h4>#4 Настройка TDS</h4>
+<h4>#4 Configuração do Sistema de Distribuição de Tráfego</h4>
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Режим работы TDS:</label>
+            <label class="login2 pull-left pull-left-pro">Modo do Filtro do Tráfego:</label>
         </div>
         <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
             <div class="bt-df-checkbox pull-left">
@@ -1174,7 +1174,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$tds_mode==='on'?'checked':''?> value="on" name="tds.mode"> Обычный </label>
+                                    <input type="radio" <?=$tds_mode==='on'?'checked':''?> value="on" name="tds.mode"> Normal </label>
                         </div>
                     </div>
                 </div>
@@ -1182,7 +1182,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$tds_mode==='full'?'checked':''?> value="full" name="tds.mode"> Посылать всех на вайт</label>
+                                    <input type="radio" <?=$tds_mode==='full'?'checked':''?> value="full" name="tds.mode"> Enviar todos para o white.</label>
                         </div>
                     </div>
                 </div>
@@ -1190,7 +1190,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$tds_mode==='off'?'checked':''?> value="off" name="tds.mode"> Посылать всех на блэк (TDS отключена)</label>
+                                    <input type="radio" <?=$tds_mode==='off'?'checked':''?> value="off" name="tds.mode"> Enviar todos para o black (Cloaker desativado).</label>
                         </div>
                     </div>
                 </div>
@@ -1202,7 +1202,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Посылать одного и того же юзера на одни и те же проклы-ленды?</label>
+            <label class="login2 pull-left pull-left-pro">Enviar o mesmo usuário para páginas personalizadas (pré-landers e landings)?</label>
         </div>
         <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
             <div class="bt-df-checkbox pull-left">
@@ -1211,7 +1211,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$save_user_flow===false?'checked':''?> value="false" name="tds.saveuserflow"> Нет </label>
+                                    <input type="radio" <?=$save_user_flow===false?'checked':''?> value="false" name="tds.saveuserflow"> Não. </label>
                         </div>
                     </div>
                 </div>
@@ -1219,7 +1219,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$save_user_flow===true?'checked':''?> value="true" name="tds.saveuserflow"> Да, посылать </label>
+                                    <input type="radio" <?=$save_user_flow===true?'checked':''?> value="true" name="tds.saveuserflow"> Sim, enviar. </label>
                         </div>
                     </div>
                 </div>
@@ -1230,11 +1230,11 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 
 <br>
 <hr>
-<h4>#5 Настройка фильтров</h4>
+<h4>#5 Configuração de filtros</h4>
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Список разрешённых ОС:</label>
+            <label class="login2 pull-left pull-left-pro">Lista de sistemas operacionais permitidos:</label>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="input-group custom-go-button">
@@ -1247,7 +1247,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Список разрешённых стран: <small>(WW или пустое значение для всего мира)</small></label>
+            <label class="login2 pull-left pull-left-pro">Lista de países permitidos: <small>(WW ou valor vazio para todo o mundo)</small></label>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
             <div class="input-group custom-go-button">
@@ -1260,7 +1260,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Список разрешённых языков: <small>(any или пустое значение для всех языков)</small></label>
+            <label class="login2 pull-left pull-left-pro">Lista de idiomas permitidos: <small>(any ou valor vazio para todos os idiomas)</small></label>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
             <div class="input-group custom-go-button">
@@ -1273,7 +1273,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-            <label class="login2 pull-left pull-left-pro">Имя файла дополнительной базы с запрещёнными IP-адресами <small>файл должен лежать в папке bases</small></label>
+            <label class="login2 pull-left pull-left-pro">Nome do arquivo de base adicional com endereços IP proibidos <small>o arquivo deve estar na pasta "bases"</small></label>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <div class="input-group custom-go-button">
@@ -1283,7 +1283,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
     </div>
     <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Дополнительная база запрещённых IP в формате CIDR?</label>
+            <label class="login2 pull-left pull-left-pro">Base adicional de IPs proibidos no formato CIDR?</label>
         </div>
         <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
             <div class="bt-df-checkbox pull-left">
@@ -1292,7 +1292,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$ip_black_cidr===false?'checked':''?> value="false" name="tds.filters.blocked.ips.cidrformat"> Нет </label>
+                                    <input type="radio" <?=$ip_black_cidr===false?'checked':''?> value="false" name="tds.filters.blocked.ips.cidrformat"> Não </label>
                         </div>
                     </div>
                 </div>
@@ -1300,7 +1300,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$ip_black_cidr===true?'checked':''?> value="true" name="tds.filters.blocked.ips.cidrformat"> Да </label>
+                                    <input type="radio" <?=$ip_black_cidr===true?'checked':''?> value="true" name="tds.filters.blocked.ips.cidrformat"> Sim </label>
                         </div>
                     </div>
                 </div>
@@ -1312,7 +1312,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Слова через запятую, при наличии которых в адресе перехода (в ссылке, по которой перешли), юзер будет отправлен на whitepage</label>
+            <label class="login2 pull-left pull-left-pro">Palavras separadas por vírgula, cuja presença no endereço de referência (no link pelo qual chegaram) fará com que o usuário seja enviado para a white-page</label>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
             <div class="input-group custom-go-button">
@@ -1325,7 +1325,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Слова через запятую, которые обязательно должны быть в адресе. Если хотя бы чего-то нет - показывается вайт</label>
+            <label class="login2 pull-left pull-left-pro">Palavras separadas por vírgula que devem estar presentes no endereço. Se faltar alguma delas, a white-page será exibida.</label>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
             <div class="input-group custom-go-button">
@@ -1338,7 +1338,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Слова через запятую, при наличии которых в UserAgent, юзер будет отправлен на whitepage</label>
+            <label class="login2 pull-left pull-left-pro">Palavras separadas por vírgula, cuja presença no UserAgent fará com que o usuário seja enviado para a white-page.</label>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
             <div class="input-group custom-go-button">
@@ -1351,7 +1351,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Блокировка по провадеру (ISP), например: facebook,google</label>
+            <label class="login2 pull-left pull-left-pro">Bloqueio por provedor (ISP), por exemplo: facebook, google</label>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
             <div class="input-group custom-go-button">
@@ -1364,7 +1364,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Посылать все запросы без referer на whitepage?</label>
+            <label class="login2 pull-left pull-left-pro">Enviar todas as solicitações sem referer para a white-page?</label>
         </div>
         <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
             <div class="bt-df-checkbox pull-left">
@@ -1373,7 +1373,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$block_without_referer===false?'checked':''?> value="false" name="tds.filters.blocked.referer.empty"> Нет </label>
+                                    <input type="radio" <?=$block_without_referer===false?'checked':''?> value="false" name="tds.filters.blocked.referer.empty"> Não </label>
                         </div>
                     </div>
                 </div>
@@ -1381,7 +1381,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$block_without_referer===true?'checked':''?> value="true" name="tds.filters.blocked.referer.empty"> Да </label>
+                                    <input type="radio" <?=$block_without_referer===true?'checked':''?> value="true" name="tds.filters.blocked.referer.empty"> Sim </label>
                         </div>
                     </div>
                 </div>
@@ -1393,7 +1393,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Слова через запятую, при наличии которых в реферере, юзер будет отправлен на whitepage</label>
+            <label class="login2 pull-left pull-left-pro">Palavras separadas por vírgula, cuja presença no referer fará com que o usuário seja enviado para a white-page.</label>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
             <div class="input-group custom-go-button">
@@ -1406,7 +1406,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
     <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <label class="login2 pull-left pull-left-pro">Посылать всех, использующих VPN и Tor на вайт?</label>
+            <label class="login2 pull-left pull-left-pro">Enviar todos que usam VPN e Tor para a white-page?</label>
         </div>
         <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
             <div class="bt-df-checkbox pull-left">
@@ -1415,7 +1415,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$block_vpnandtor===false?'checked':''?> value="false" name="tds.filters.blocked.vpntor"> Нет </label>
+                                    <input type="radio" <?=$block_vpnandtor===false?'checked':''?> value="false" name="tds.filters.blocked.vpntor"> Não </label>
                         </div>
                     </div>
                 </div>
@@ -1423,7 +1423,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="i-checks pull-left">
                             <label>
-                                    <input type="radio" <?=$block_vpnandtor===true?'checked':''?> value="true" name="tds.filters.blocked.vpntor"> Да </label>
+                                    <input type="radio" <?=$block_vpnandtor===true?'checked':''?> value="true" name="tds.filters.blocked.vpntor"> Sim </label>
                         </div>
                     </div>
                 </div>
@@ -1433,11 +1433,11 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 </div>
 <br>
 <hr>
-<h4>#6 Настройка дополнительных скриптов</h4>
+<h4>#6 Configuração de scripts adicionais</h4>
 <div class="form-group-inner">
 <div class="row">
 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<label class="login2 pull-left pull-left-pro">Что делать с кнопкой Назад?</label>
+<label class="login2 pull-left pull-left-pro">O que fazer com o botão Voltar?</label>
 </div>
 <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
 <div class="bt-df-checkbox pull-left">
@@ -1446,7 +1446,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="i-checks pull-left">
                 <label>
-                        <input type="radio" <?=$back_button_action==='off'?'checked':''?> value="off" name="scripts.back.action" onclick="(document.getElementById('b_9').style.display='none')"> Оставить по умолчанию </label>
+                        <input type="radio" <?=$back_button_action==='off'?'checked':''?> value="off" name="scripts.back.action" onclick="(document.getElementById('b_9').style.display='none')"> Deixar como padrão. </label>
             </div>
         </div>
     </div>
@@ -1454,7 +1454,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="i-checks pull-left">
                 <label>
-                        <input type="radio" <?=$back_button_action==='disable'?'checked':''?> value="disable" name="scripts.back.action" onclick="(document.getElementById('b_9').style.display='none')"> Отключить (перестает нажиматься)</label>
+                        <input type="radio" <?=$back_button_action==='disable'?'checked':''?> value="disable" name="scripts.back.action" onclick="(document.getElementById('b_9').style.display='none')"> Desativar (deixa de ser clicável).</label>
             </div>
         </div>
     </div>
@@ -1462,7 +1462,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="i-checks pull-left">
                 <label>
-                        <input type="radio" <?=$back_button_action==='replace'?'checked':''?> value="replace" name="scripts.back.action" onclick="(document.getElementById('b_9').style.display='block')"> Повесить на нее редирект на URL</label>
+                        <input type="radio" <?=$back_button_action==='replace'?'checked':''?> value="replace" name="scripts.back.action" onclick="(document.getElementById('b_9').style.display='block')"> Atribuir a ela um redirecionamento para o URL (Back Redirect).</label>
             </div>
         </div>
     </div>
@@ -1474,7 +1474,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
 <div class="row">
 <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-<label class="login2 pull-left pull-left-pro">Куда направлять при нажатии Назад?</label>
+<label class="login2 pull-left pull-left-pro">Para onde direcionar ao clicar em Voltar?</label>
 </div>
 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
 <div class="input-group custom-go-button">
@@ -1487,7 +1487,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
 <div class="row">
 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<label class="login2 pull-left pull-left-pro">Запретить выделять и сохранять текст по Ctrl+S, убирать контекстное меню?</label>
+<label class="login2 pull-left pull-left-pro">Proibir a seleção e salvamento de texto com Ctrl+S, desabilitar o menu contextual?</label>
 </div>
 <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
 <div class="bt-df-checkbox pull-left">
@@ -1496,7 +1496,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="i-checks pull-left">
                 <label>
-                        <input type="radio" <?=$disable_text_copy===false?'checked':''?> value="false" name="scripts.disabletextcopy"> Нет </label>
+                        <input type="radio" <?=$disable_text_copy===false?'checked':''?> value="false" name="scripts.disabletextcopy"> Não </label>
             </div>
         </div>
     </div>
@@ -1504,7 +1504,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="i-checks pull-left">
                 <label>
-                        <input type="radio" <?=$disable_text_copy===true?'checked':''?> value="true" name="scripts.disabletextcopy"> Да, запретить </label>
+                        <input type="radio" <?=$disable_text_copy===true?'checked':''?> value="true" name="scripts.disabletextcopy"> Sim, Proibir </label>
             </div>
         </div>
     </div>
@@ -1516,7 +1516,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
 <div class="row">
 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<label class="login2 pull-left pull-left-pro">Открывать ссылки на ленд в новом окне с подменой в старом окне проклы на URL указанный ниже?</label>
+<label class="login2 pull-left pull-left-pro">Abrir links para o landing em uma nova janela, substituindo o pré-lander na janela antiga pelo URL indicado abaixo?</label>
 </div>
 <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
 <div class="bt-df-checkbox pull-left">
@@ -1525,7 +1525,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="i-checks pull-left">
                 <label>
-                        <input type="radio" <?=$replace_prelanding===false?'checked':''?> value="false" name="scripts.prelandingreplace.use" onclick="(document.getElementById('b_10').style.display='none')"> Нет </label>
+                        <input type="radio" <?=$replace_prelanding===false?'checked':''?> value="false" name="scripts.prelandingreplace.use" onclick="(document.getElementById('b_10').style.display='none')"> Não </label>
             </div>
         </div>
     </div>
@@ -1533,7 +1533,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="i-checks pull-left">
                 <label>
-                        <input type="radio" <?=$replace_prelanding===true?'checked':''?> value="true" name="scripts.prelandingreplace.use" onclick="(document.getElementById('b_10').style.display='block')"> Да, открывать  </label>
+                        <input type="radio" <?=$replace_prelanding===true?'checked':''?> value="true" name="scripts.prelandingreplace.use" onclick="(document.getElementById('b_10').style.display='block')"> Sim, Abrir Links.  </label>
             </div>
         </div>
     </div>
@@ -1545,7 +1545,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
 <div class="row">
 <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-<label class="login2 pull-left pull-left-pro">URL который откроется в старом окне:</label>
+<label class="login2 pull-left pull-left-pro">URL que será aberto na janela antiga:</label>
 </div>
 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
 <div class="input-group custom-go-button">
@@ -1560,7 +1560,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
 <div class="row">
 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<label class="login2 pull-left pull-left-pro">Открывать страницу Спасибо ленда в новом окне с подменой в старом окне ленда на URL указанный ниже?</label>
+<label class="login2 pull-left pull-left-pro">Abrir a página de agradecimento do landing em uma nova janela, substituindo o landing na janela antiga pelo URL indicado abaixo?</label>
 </div>
 <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
 <div class="bt-df-checkbox pull-left">
@@ -1569,7 +1569,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="i-checks pull-left">
                 <label>
-                        <input type="radio" <?=$replace_landing===false?'checked':''?> value="false" name="scripts.landingreplace.use" onclick="(document.getElementById('b_1010').style.display='none')"> Нет </label>
+                        <input type="radio" <?=$replace_landing===false?'checked':''?> value="false" name="scripts.landingreplace.use" onclick="(document.getElementById('b_1010').style.display='none')"> Não. </label>
             </div>
         </div>
     </div>
@@ -1577,7 +1577,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="i-checks pull-left">
                 <label>
-                        <input type="radio" <?=$replace_landing===true?'checked':''?> value="true" name="scripts.landingreplace.use" onclick="(document.getElementById('b_1010').style.display='block')"> Да, открывать  </label>
+                        <input type="radio" <?=$replace_landing===true?'checked':''?> value="true" name="scripts.landingreplace.use" onclick="(document.getElementById('b_1010').style.display='block')"> Sim, abrir,  </label>
             </div>
         </div>
     </div>
@@ -1589,7 +1589,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
 <div class="row">
 <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-<label class="login2 pull-left pull-left-pro">URL который откроется в старом окне:</label>
+<label class="login2 pull-left pull-left-pro">URL que será aberto na janela antiga:</label>
 </div>
 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
 <div class="input-group custom-go-button">
@@ -1603,7 +1603,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
 <div class="row">
 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<label class="login2 pull-left pull-left-pro">К полю ввода телефона НА ЛЕНДИНГЕ будет добавлена маска указанная ниже</label>
+<label class="login2 pull-left pull-left-pro">Uma máscara será adicionada ao campo de entrada de telefone NO LANDING conforme indicado abaixo.</label>
 </div>
 <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
 <div class="bt-df-checkbox pull-left">
@@ -1612,7 +1612,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="i-checks pull-left">
                 <label>
-                        <input type="radio" <?=$black_land_use_phone_mask===false?'checked':''?> value="false" name="scripts.phonemask.use" onclick="(document.getElementById('b_11').style.display='none')"> Нет </label>
+                        <input type="radio" <?=$black_land_use_phone_mask===false?'checked':''?> value="false" name="scripts.phonemask.use" onclick="(document.getElementById('b_11').style.display='none')"> Não </label>
             </div>
         </div>
     </div>
@@ -1620,7 +1620,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="i-checks pull-left">
                 <label>
-                        <input type="radio" <?=$black_land_use_phone_mask===true?'checked':''?> value="true" name="scripts.phonemask.use" onclick="(document.getElementById('b_11').style.display='block')"> Да, добавить маску </label>
+                        <input type="radio" <?=$black_land_use_phone_mask===true?'checked':''?> value="true" name="scripts.phonemask.use" onclick="(document.getElementById('b_11').style.display='block')"> Sim, добавить маску </label>
             </div>
         </div>
     </div>
@@ -1655,7 +1655,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="i-checks pull-left">
             <label>
-                    <input type="radio" <?=$comebacker===false?'checked':''?> value="false" name="scripts.comebacker"> Нет </label>
+                    <input type="radio" <?=$comebacker===false?'checked':''?> value="false" name="scripts.comebacker"> Não </label>
         </div>
     </div>
 </div>
@@ -1663,7 +1663,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="i-checks pull-left">
             <label>
-                    <input type="radio" <?=$comebacker===true?'checked':''?> value="true" name="scripts.comebacker"> Да</label>
+                    <input type="radio" <?=$comebacker===true?'checked':''?> value="true" name="scripts.comebacker"> Sim</label>
         </div>
     </div>
 </div>
@@ -1683,7 +1683,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="i-checks pull-left">
             <label>
-                    <input type="radio" <?=$callbacker===false?'checked':''?> value="false" name="scripts.callbacker"> Нет </label>
+                    <input type="radio" <?=$callbacker===false?'checked':''?> value="false" name="scripts.callbacker"> Não </label>
         </div>
     </div>
 </div>
@@ -1691,7 +1691,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="i-checks pull-left">
             <label>
-                    <input type="radio" <?=$callbacker===true?'checked':''?> value="true" name="scripts.callbacker"> Да</label>
+                    <input type="radio" <?=$callbacker===true?'checked':''?> value="true" name="scripts.callbacker"> Sim</label>
         </div>
     </div>
 </div>
@@ -1711,7 +1711,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="i-checks pull-left">
             <label>
-                    <input type="radio" <?=$addedtocart===false?'checked':''?> value="false" name="scripts.addedtocart"> Нет </label>
+                    <input type="radio" <?=$addedtocart===false?'checked':''?> value="false" name="scripts.addedtocart"> Não </label>
         </div>
     </div>
 </div>
@@ -1719,7 +1719,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="i-checks pull-left">
             <label>
-                    <input type="radio" <?=$addedtocart===true?'checked':''?> value="true" name="scripts.addedtocart"> Да</label>
+                    <input type="radio" <?=$addedtocart===true?'checked':''?> value="true" name="scripts.addedtocart"> Sim</label>
         </div>
     </div>
 </div>
@@ -1730,7 +1730,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <div class="form-group-inner">
 <div class="row">
 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<label class="login2 pull-left pull-left-pro">Использовать отложенную загрузку (lazy loading) для картинок на прелендах/лендах?</label>
+<label class="login2 pull-left pull-left-pro">Использовать отложенную загрузку (lazy loading) для картинок на преленSimх/ленSimх?</label>
 </div>
 <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
 <div class="bt-df-checkbox pull-left">
@@ -1739,7 +1739,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="i-checks pull-left">
             <label>
-                    <input type="radio" <?=$images_lazy_load===false?'checked':''?> value="false" name="scripts.imageslazyload"> Нет </label>
+                    <input type="radio" <?=$images_lazy_load===false?'checked':''?> value="false" name="scripts.imageslazyload"> Não </label>
         </div>
     </div>
 </div>
@@ -1747,7 +1747,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="i-checks pull-left">
             <label>
-                    <input type="radio" <?=$images_lazy_load===true?'checked':''?> value="true" name="scripts.imageslazyload"> Да</label>
+                    <input type="radio" <?=$images_lazy_load===true?'checked':''?> value="true" name="scripts.imageslazyload"> Sim</label>
         </div>
     </div>
 </div>
@@ -1757,20 +1757,21 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 </div>
 <br>
 <hr>
-<h4>#7 Настройка суб-меток</h4>
-<p>Кло берёт из адресной строки те субметки, что слева и:<br>
-1. Если у вас локальный ленд, то кло записывает значения меток в каждую форму на ленде в поля с именами, которые справа<br>
-2. Если у вас ленд в ПП, то кло дописывает значения меток к ссылке ПП с именами, которые справа<br>
-Таким образом мы передаём значения субметок в ПП, чтобы в стате ПП отображалась нужная нам инфа <br>
-Ну и плюс это нужно для того, чтобы передавать subid для постбэка<br>
-Есть 3 "зашитые" метки: <br>
-- subid - уникальный идентификатор пользователя, создаётся при заходе пользователя на блэк, хранится в куки<br>
-- prelanding - название папки преленда<br>
-- landing - название папки ленда<br><br />
-Пример: <br>
-у вас в адресной строке было http://xxx.com?cn=MyCampaign<br>
-вы написали в настройке: cn => utm_campaign <br />
-в форме на ленде добавится <pre>&lt;input type="hidden" name="utm_campaign" value="MyCampaign"/&gt;</pre>
+<h4>#7 Configuração de sub-tags</h4>
+<p>O cloaker pega da barra de endereços as sub-tags que estão à esquerda e:<br>
+1. Se você tem um landing page local, o cloaker grava os valores das tags em cada formulário no landing page nos campos com os nomes que estão à direita<br>
+2. Se você tem um landing page em uma Parceria de Publicidade (PP), o cloaker adiciona os valores das tags ao link da PP com os nomes que estão à direita<br>
+Dessa forma, transferimos os valores das sub-tags para a PP, para que as informações necessárias apareçam nas estatísticas da PP<br>
+Além disso, isso é necessário para transferir o subid para o postback<br>
+Existem 3 tags "pré-definidas": <br>
+- subid - identificador único do usuário, criado quando o usuário acessa o black, armazenado nos cookies<br>
+- prelanding - nome da pasta do pré-lander<br>
+- landing - nome da pasta do landing<br><br />
+Exemplo: <br>
+se na barra de endereço você tiver http://xxx.com?cn=MyCampaign<br>
+e você escreveu na configuração: cn => utm_campaign <br />
+no formulário do landing será adicionado <pre>&lt;input type="hidden" name="utm_campaign" value="MyCampaign"/&gt;</pre>
+
 </p>
 <div id="subs_container">
 <?php  for ($i=0;$i<count($sub_ids);$i++){?>
@@ -1790,7 +1791,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
     </div>
 </div>
 <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-    <a href="javascript:void(0)" class="remove-sub-item btn btn-sm btn-primary">Удалить</a>
+    <a href="javascript:void(0)" class="remove-sub-item btn btn-sm btn-primary">УSimлить</a>
 </div>
 </div>
 </div>
@@ -1832,7 +1833,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
 <label class="login2 pull-left pull-left-pro">Настройка отображения таблиц по субметкам в стате:</label>
 <br/>
 <br/>
-<p>Слева название метки, которую кло возьмёт из адреса перехода.</p>
+<p>Слева название метки, которую кло возьмёт из адреса перехоSim.</p>
 <p>Справа название НА АНГЛИЙСКОМ таблицы, в которой будут показаны все значения выбранной метки и их стата: клики, конверсии</p>
 </div>
 </div>
@@ -1855,7 +1856,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
     </div>
 </div>
 <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-    <a href="javascript:void(0)" class="remove-stats-sub-item btn btn-sm btn-primary">Удалить</a>
+    <a href="javascript:void(0)" class="remove-stats-sub-item btn btn-sm btn-primary">УSimлить</a>
 </div>
 </div>
 </div>
@@ -1948,7 +1949,7 @@ if (isset($_GET['startdate'])&& isset($_GET['enddate'])) {
     </div>
 </div>
 <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-    <a href="javascript:void(0)" class="remove-s2s-item btn btn-sm btn-primary">Удалить</a>
+    <a href="javascript:void(0)" class="remove-s2s-item btn btn-sm btn-primary">УSimлить</a>
 </div>
 </div>
 <div class="row">
